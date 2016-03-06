@@ -16,10 +16,6 @@
 	],
 	"license": "MIT",
 	"homepage": "https://github.com/naveen13/angular-query-builder",
-	"ignore": [
-		"**/.*",
-		"node_modules"
-	],
 	"dependencies": {
 
 	}
