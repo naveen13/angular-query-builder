@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		body{ padding: 10px; }
+		[ng\:cloak],
+		[ng-cloak],
+		[data-ng-cloak],
+		[x-ng-cloak],
+		.ng-cloak,
+		.x-ng-cloak {
+			display: none !important;
+		}
+	</style>
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" href="./bower_components/angular-jquery-query-builder/release/angular-jquery-query-builder.css" />
+	<link rel="stylesheet" href="css/main.css" />
+
+	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-cloak>
+	<div class="page-header">
+		<h1>Angular jQuery Query Builder</h1>
+	</div>
+	<div class="container-fluid" ng-controller="AppCtrl">
+		<div query-builder options="options" ng-model="jsonParsed" event-trigger="'#gete'"></div>
+		<button class="btn btn-primary" id="gete">Get It</button>
+		<div class="row" ng-if="jsonParsed">
+			<div class="col-sm-6 inner">
+				<h3>JSON Output</h3>
+				<textarea class="form-control json-parsed" rows="10" readonly>{{jsonParsed.json}}</textarea>
+			</div>
+			<div class="col-sm-6 inner">
+				<h3>SQL Output</h3>
+				<textarea class="form-control sql-parsed" rows="10" readonly>{{jsonParsed.sql}}</textarea>
+			</div>
+		</div>
+	</div>
+	<!-- /container -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+	<script src="http://boiteaimages.com/demo/querybuilder/query-builder.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+	<script src="../release/angular-jquery-query-builder.js"></script>
+
+	<script src="js/vendor/bootstrap.min.js"></script>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>

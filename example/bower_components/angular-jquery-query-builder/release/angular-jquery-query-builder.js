@@ -5,15 +5,18 @@ angular.module('angular-jquery-query-builder', [])
 		require: "ngModel",
 		scope: {
 			modelResponse: "=ngModel",
-			options: "=",
-			eventTrigger: "="
+			rules: "=",
+			filters: "="
 		},
 		controller: function ($scope, $element) {
 			function updateElement() {
-				if ($scope.options) {
-					$element.queryBuilder($scope.options);
+				if ($scope.filters && $scope.rules) {
+					$element.queryBuilder({
+						sortable: true,
+						filters: $scope.filters
+					});
 					// set rules
-					$element.queryBuilder('setRules', $scope.options.rules);
+					$element.queryBuilder('setRules', $scope.rules);
 				}
 			}
 			$scope.$watch($scope.rules, function (value) {
@@ -33,12 +36,6 @@ angular.module('angular-jquery-query-builder', [])
 		},
 		link: function ($scope, $element, $attrs) {
 			$element.on("click", $scope.updateResponse);
-			console.log($scope.eventTrigger);
-			var ele = angular.element($scope.eventTrigger);
-			ele.on('click', function(){
-				console.log('hi hi');
-			})
-
 		}
 	}
 });

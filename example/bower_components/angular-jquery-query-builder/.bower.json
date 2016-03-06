@@ -1,0 +1,29 @@
+{
+  "name": "angular-jquery-query-builder",
+  "authors": [
+    "Naveen Kumar <naveen.aol13@gmail.com>"
+  ],
+  "description": "AngularJS wrapper for jQuery QueryBuilder",
+  "main": [
+    "release/angular-jquery-query-builder.js",
+    "release/angular-jquery-query-builder.css"
+  ],
+  "keywords": [
+    "angular-jquery-query-builder",
+    "jquery query builder",
+    "sql query builder"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/naveen13/angular-query-builder",
+  "dependencies": {},
+  "_release": "2395f2401b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "2395f2401bd56b9d088638e642c44223b06e1675"
+  },
+  "_source": "C:\\Users\\Naveen\\workspace\\angular-query-builder",
+  "_target": "*",
+  "_originalSource": "../",
+  "_direct": true
+}
